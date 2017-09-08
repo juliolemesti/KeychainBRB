@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="la.foton.brb.myphone.foton-keychain" version="1.0.0">
+  <name>FotonKeyChain</name>
+  <description>Plugin para guardar e recuperar informacoes do keychain do aparelho</description>
+  <license>MIT</license>
+  <keywords>cordova, keychain</keywords>
+  
+	<js-module name="keychain" src="www/foton-keychain.js">
+		<clobbers target="FotonKeyChain" />
+	</js-module>
+	
+  <!-- android -->
+  <platform name="android">
+    <config-file target="config.xml" parent="/*">
+      <feature name="FotonKeyChain">
+        <param name="android-package" value="la.foton.brb.myphone.FotonKeyChain"/>
+      </feature>
+    </config-file>
+    
+	<config-file target="AndroidManifest.xml" parent="/manifest">
+		 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+		 <uses-permission android:name="android.permission.INTERNET" />
+		 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+		 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+		 <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+		 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  	</config-file>
+	<source-file src="src/android/FotonKeyChain.java" target-dir="src/la/foton/brb/myphone/" />
+	
+  </platform>
+
+  <!-- ios -->
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="FotonKeyChain">
+        <param name="ios-package" value="FotonKeyChain" />
+      </feature>
+    </config-file>
+    <header-file src="src/ios/FotonKeyChain.h" />
+    <source-file src="src/ios/FotonKeyChain.m" />
+  </platform>
+
+</plugin>

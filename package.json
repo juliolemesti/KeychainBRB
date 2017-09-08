@@ -1,0 +1,19 @@
+{
+    "version": "0.0.1",
+    "name": "la.foton.myphone.foton-keychain",
+    "cordova_name": "foton-keychain",
+    "description": "Plugin para armazenar e recuperar informacoes no keychain/keystore do dispositivo",
+    "license": "MIT",
+    "cordova": {
+	    "id": "la.foton.myphone.foton-keychain",
+	    "platforms": [
+	      "ios",
+	      "android"
+	    ]
+	},
+    "keywords": [
+        "cordova",
+        "keychain"
+    ],
+    "engines": []
+}
