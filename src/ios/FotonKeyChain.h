@@ -11,6 +11,7 @@
 @interface FotonKeyChain : CDVPlugin
 
 - (void) armazenar:(CDVInvokedUrlCommand*)command;
+- (void) recuperar:(CDVInvokedUrlCommand*)command;
 
 // retain command for async repsonses
 @property (nonatomic, strong) CDVInvokedUrlCommand* command;
