@@ -33,7 +33,15 @@
         attributesToUpdate[(__bridge id)kSecValueData] = [dado dataUsingEncoding:NSUTF8StringEncoding];
         
         OSStatus sts = SecItemUpdate((__bridge CFDictionaryRef)keychainItem, (__bridge CFDictionaryRef)attributesToUpdate);
-        NSLog(@"Error Code: %d", (int)sts);
+
+        if (sts == noErr)
+        {
+            [self success];
+        }
+        else
+        {
+            [self error:@"Ocorreu um erro na tentativa de salvar a informacao"];
+        }
     }
     else
     {
