@@ -5,15 +5,19 @@
     "description": "Plugin para armazenar e recuperar informacoes no keychain/keystore do dispositivo",
     "license": "MIT",
     "cordova": {
-	    "id": "la.foton.myphone.foton-keychain",
-	    "platforms": [
-	      "ios",
-	      "android"
-	    ]
-	},
+        "id": "la.foton.myphone.foton-keychain",
+        "platforms": [
+            "ios",
+            "android"
+        ]
+    },
     "keywords": [
         "cordova",
         "keychain"
     ],
-    "engines": []
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/juliolemesti/KeychainBRB.git"
+    },
+    "homepage": "https://github.com/juliolemesti/KeychainBRB#readme"
 }
